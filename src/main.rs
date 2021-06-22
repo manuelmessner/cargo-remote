@@ -148,7 +148,8 @@ fn main() {
     // transfer project to build server
     let mut rsync_to = Command::new("rsync");
     rsync_to
-        .arg("-a".to_owned())
+        .arg("-a")
+        .arg("-L")
         .arg("--delete")
         .arg("--compress")
         .arg("-e")
